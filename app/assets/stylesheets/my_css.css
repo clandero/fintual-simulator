@@ -1,0 +1,96 @@
+.center-div {
+    margin: auto;
+    width: 50%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.full-width{
+    width: 100%;
+}
+
+.half-width{
+    width: 50%;
+}
+
+.blue-text{
+    color: #025AD6;
+}
+
+.bottom-margin{
+    margin-bottom: 5vh;
+}
+
+.align-content-left{
+    text-align:left;
+    float:left;
+}
+
+.align-content-right{
+    text-align:right;
+    float:right;
+}
+
+.red-text{
+    color:red;
+}
+
+.loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    color: white;
+    background-color: #025AD6;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+}
+.btn:focus,
+.btn:active:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+    color: white;
+    background-color: #6D83E2;
+    text-decoration: none;
+}
+.btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px #6D83E2;
+    box-shadow: inset 0 3px 5px #6D83E2;
+}

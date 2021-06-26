@@ -1,0 +1,18 @@
+<div class="center-div">
+    <h1 class="center-text blue-text">Simulador de inversión Fintual</h1>
+</div>
+
+<div class="center-div">
+    <h3 class="center-text">De haber invertido  <span class="blue-text"><%= number_to_currency(@monto_inicial, precision: 0, :delimiter => ".")%></span> 
+    desde el <span class="blue-text>"><%= @fecha_inicial%></span>, hoy tendrías:</h3>
+</div>
+
+<div class="center-div">
+    <h1 class="center-text"> <%= number_to_currency(@resultado, precision: 0, :delimiter => ".") %> </h1>
+</div>
+
+<div class="center-div center-text">
+    <a href="/" class="btn"> Probar una nueva simulación </a>
+</div>
+
+<%= stylesheet_link_tag 'my_css' %>

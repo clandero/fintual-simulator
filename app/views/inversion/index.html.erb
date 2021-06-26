@@ -1,0 +1,64 @@
+<div class="center-div">
+    <h1 class="center-text blue-text">Simulador de inversión Fintual</h1>
+</div>
+
+<div class="center-div">
+    <%= form_for :simulacion, url: "/result" do |form|  %>
+
+        <div class="bottom-margin">
+            <div class="align-content-left"> 
+                <%= form.label :monto_inicial%>
+            </div> 
+            <div class="align-content-right">
+                <%= form.number_field :monto_inicial, :id=>"monto_inicial", :required=>true%>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="bottom-margin">
+            <div class="align-content-left"> 
+                <%= form.label :fecha_inicio %>
+            </div> 
+            <div class="align-content-right">
+                <%= form.date_field :fecha_inicio, :id=>"fecha_inicio", :required=>true, :min=>'2018-02-13'%>
+            </div>
+        </div>
+        
+        
+        <div class="bottom-margin">
+            <h3 class="align-content-left"> 
+                <%= form.label :conservative_clooney %> 
+            </h3> 
+            <h3 id="conservative_percentage" class="align-content-right"></h3> 
+            <%= form.range_field :conservative_clooney, :value=>0, :min=>0, :max=>100, :id=>"conservative", :required=>true, :class=>"full-width"%> 
+        </div>
+        
+        <div class="bottom-margin">
+            <h3 class="align-content-left"> 
+                <%= form.label :moderate_pitt %> 
+            </h3> 
+            <h3 id="moderate_percentage" class="align-content-right"></h3> 
+            <%= form.range_field :moderate_pitt, :value=>0, :min=>0, :max=>100, :id=>"moderate", :required=>true, :class=>"full-width"%> 
+        </div>
+
+        <div class="bottom-margin">
+            <h3 class="align-content-left"> 
+                <%= form.label :risky_norris %> 
+            </h3> 
+            <h3 id="risky_percentage" class="align-content-right"></h3> 
+            <%= form.range_field :risky_norris, :value=>0, :min=>0, :max=>100, :id=>"risky", :required=>true, :class=>"full-width"%> 
+        </div>
+        
+        <span id="composition_error" class="red-text"></span>
+        
+        <div class="bottom-margin">
+            <%= form.submit :value=>"Enviar simulación", :id => "submit_btn", :class=>"btn" %>
+            <div class="loader align-content-right" id="loader"></div>
+        </div>
+        
+    <% end  %>
+</div>
+
+<%= javascript_pack_tag 'my_js' %>
+<%= stylesheet_link_tag 'my_css' %>
